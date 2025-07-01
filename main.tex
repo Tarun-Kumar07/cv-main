@@ -78,15 +78,26 @@
 %----------- Experience at ION -----------
 \cvHeaderTwo{ION Group}{20 Jun 2022 -- 20 Jun 2025}
 
-\cvHeaderThree{Project: Ion-Foundation}
+\cvHeaderThree{Foundation}
 
 \begin{cvItemList}
   \item Improved speed of dataload, bringing down load time from 30mins to 2mins  
 \end{cvItemList}
 
-\cvHeaderThree{iCMLimits - Core Maintainer}
+\cvHeaderThree{iCM-Limits - Core Maintainer}
 \begin{cvItemList}
-  \item Implemented support for multi-currency matching with dynamic thresholding.
+  \item Developed core components of a new in-memory calculation engine for computing financial availability (Limit + Utilization), consumed by FNMA to auto-generate DLOD reports.
+  \item Implemented configuration-driven logic to compute Limits and Utilizations using weighted Aggregations over filtered transactions.
+  \item Contributed to implementation of real-time APIs that validate incoming transactions and flag potential limit breaches before persisting to the system.
+  \item Designed and optimized initialization of calculation matrices, eliminating redundant structures to improve memory efficiency and reduce computation time.
+  \item Built rule-based filter matching logic to classify and aggregate transactions per account and date, enabling flexible and extensible business configurations.
+  \item Implemented rule-based timezone assignment for accounts, supporting attribute-based matching with implicit priority resolution.
+  \item Integrated cross-currency calculations by interfacing with FX conversion components and applying approximation policies to ensure accurate limit evaluations.
+  \item Integrated diagnostics into the calculation engine to explain calculation failures (e.g., missing opening balances), improving debuggability for support teams.
+  \item Optimized Java \texttt{HashMap} usage in critical calculation paths, reducing iteration latency from 6µs to 300ns per cycle.
+  \item Implemented logging assertions in the testing infrastructure to detect silent exceptions and validate expected log outputs during end-to-end flows.
+  \item Achieved 92\% code coverage with 1000+ Cucumber test cases; FNMA reported zero bugs post-production, demonstrating delivery quality and system reliability.
+  \item Contributed to a shared code review framework adopted by all developers, reducing dependency on architects and improving code consistency.
 \end{cvItemList}
 
 \cvHeaderThree{iCM-RefData – Core Maintainer}
