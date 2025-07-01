@@ -1,4 +1,4 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage{geometry}
 \geometry{margin=0.75in}
@@ -15,8 +15,9 @@
 
 % Header 1 - Section Headers
 \newcommand{\cvHeaderOne}[1]{%
-  \vspace*{1.2em}%
+  \vspace*{1.5em}%
   {\noindent\large\textbf{\MakeUppercase{#1}}\par}%
+  \noindent\rule{\linewidth}{0.4pt}%
   \vspace*{0.5em}%
 }
 
@@ -72,16 +73,20 @@
 \cvHeaderTwo{B.Tech in Electronics and Telecommunication Engineering}{Aug 2018 -- May 2022}
 \cvItem{College of Engineering Pune, Technological University}
 
+
 %----------- Experience -----------
 \cvHeaderOne{Proffesional Experience}
 
 %----------- Experience at ION -----------
-\cvHeaderTwo{ION Group}{20 Jun 2022 -- 20 Jun 2025}
+\cvHeaderTwo{ION Group}{Jun 2022 -- Jun 2025}
 
 \cvHeaderThree{Foundation}
 
 \begin{cvItemList}
+ % TODO
   \item Improved speed of dataload, bringing down load time from 30mins to 2mins  
+  \item Import and Export 
+  \item App gen 
 \end{cvItemList}
 
 \cvHeaderThree{iCM-Limits - Core Maintainer}
@@ -100,6 +105,8 @@
   \item Contributed to a shared code review framework adopted by all developers, reducing dependency on architects and improving code consistency.
 \end{cvItemList}
 
+\newpage
+
 \cvHeaderThree{iCM-RefData – Core Maintainer}
 \begin{cvItemList}
   \item Architected a reusable approval workflow adopted by 5 teams, enabling faster development and consistent business logic implementation.
@@ -111,17 +118,17 @@
 \end{cvItemList}
 
 %----------- Experience at Securonix -----------
-\cvHeaderTwo{Securonix}{04 May 2021 -- 26 Jun 2021}
+\cvHeaderTwo{Securonix}{May 2021 -- Jun 2021}
 
 \cvHeaderThree{Security Software Engineer Intern}
 \begin{cvItemList}
-\item Improved policy compatibility with Securonix SNYPER tool by identifying incompatible policies.
-\item Enhanced threat hunting by creating Flask web app for transferring and processing IOCs, boosting
-threat detection.
+\item Enhanced policy compatibility with the Securonix SNYPER tool by identifying and reporting on incompatible policies, facilitating swift remediation by cross-functional teams.
+\item Optimized threat hunting operations by developing a Flask web application to efficiently transfer and process Indicators of Compromise (IOCs), enhancing threat detection capabilities.
+\item Streamlined team workflows and improved efficiency by creating automation scripts for various tasks, including web scraping and SQL query generation, resulting in time savings and increased productivity threat detection.
 \end{cvItemList}
 
 %----------- Experience at MindSpark -----------
-\cvHeaderTwo{MindSpark'19, COEP}{04 May 2021 -- 26 Jun 2021}
+\cvHeaderTwo{MindSpark'19, COEP}{May 2019 -- Oct 2019}
 
 \cvHeaderThree{Web Developer}
 \begin{cvItemList}
@@ -129,19 +136,65 @@ threat detection.
 \item Collaborated on an Android app that achieved over 1,000 downloads within a week.
 \end{cvItemList}
 
-% %----------- Mentorship Experience -------------
-% \cvHeaderOne{Mentorship experience}
-%
-% \cvHeaderThree{ION Group}
-% \begin{cvItemList}
-% \item 3 years dev induction 
-% \item Onboarding new members when in Ion-Foundation and iCM team in WSS 
-% \end{cvItemList}
-%
-% \cvHeaderThree{DSAI club, COEP}
-% \cvItem{Efficient nets paper explained to juniors}
-%
+%----------- Mentorship Experience -------------
+\cvHeaderOne{Mentorship Experience}
+
+\cvHeaderThree{ION Group}
+\begin{cvItemList}
+  \item Conducted onboarding sessions for new undergraduate hires for 3 consecutive years, delivering talks on \textbf{SOLID principles} and \textbf{Clean Code}.
+  \item Mentored new team members in iCM\_Limits teams by explaining the architecture of the \texttt{iCM\_Limits} product and pairing with them on initial tasks; all became independent within 3 sprints.
+\end{cvItemList}
+
+\cvHeaderThree{DSAI Club, COEP}
+\begin{cvItemList}
+  \item Delivered a technical session explaining the \textbf{EfficientNet} paper, covering hyperparameter tuning in CNNs to help juniors understand modern research in deep learning.
+\end{cvItemList}
+
+%----------- Scholarships -----------
+\cvHeaderOne{Scholarships}
+\cvHeaderTwo{Duke ECE merit award}{Aug 2025 -- Dec 2026}
+\begin{cvItemList}
+  \item Awarded \$3{,}386 per semester for all three full-time semesters at Duke.
+\end{cvItemList}
+
+\newpage
+
 % %----------- Publications -------------
-% \cvHeaderOne{Publications}
+\cvHeaderOne{Publications}
+
+\cvHeaderThree{HLS Implementation of Quantum Shor’s Algorithm Using Matrix Pruning}
+\begin{cvItemList}
+\item Shor's algorithm was simulated efficiently on resource-constrained hardware, like FPGAs, by converting quantum circuits, traditionally represented by memory-intensive unitary matrices, into compact data flow graph representations
+\item This FPGA implementation successfully achieved the factorization of large numbers, including 16,843,009, demonstrating the practical potential of hardware-based quantum algorithm simulations.
+\item \href{https://ieeexplore.ieee.org/document/9807860}{Link} to publication
+\end{cvItemList}
+
+% %----------- Projects -------------
+\cvHeaderOne{Projects}
+
+\cvHeaderTwo{Open source contributions}{}
+
+\cvHeaderThree{Pennylane}
+\begin{cvItemList}
+\item Enhanced the testing framework by implementing assert\_equal in PR \#5780. This feature provides detailed explanations for operator differences, improving debugging.
+\item Implemented QutritChannel functionality in PR \#5793 to support noise models for qutrits in quantum computing simulations.
+\item Improved shot sampling efficiency with shots.bins() in PR \#5476, optimizing performance.
+\end{cvItemList}
+
+\cvHeaderThree{Amazon braket python SDK}
+\begin{cvItemList}
+\item Resolved Issue \#603 by handling conflicts with FreeParameter names and OpenQASM reserved keywords in PR \#999. 
+\end{cvItemList}
+
+\cvHeaderThree{Qiskit}
+\begin{cvItemList}
+\item Contributed to fixing Issue \#12106, addressing synth\_cnot\_count\_full\_pmh for synthesizing linear reversible circuits.
+\end{cvItemList}
+
+\cvHeaderThree{Qbraid-Qir}
+\begin{cvItemList}
+ % TODO
+\item Reported an issue 
+\end{cvItemList}
 
 \end{document}
