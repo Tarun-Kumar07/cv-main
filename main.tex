@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{geometry}
 \geometry{margin=0.75in}
@@ -24,29 +24,22 @@
 \newcommand{\cvHeaderTwo}[2]{%
   \vspace{0.8em}%
   \noindent\textbf{\normalsize #1} \hfill \textit{#2}\par%
-  \vspace{0.4em}%
 }
 
 % Header 3 - Team or Project (bold inline heading)
-\newcommand{\cvHeaderThree}[2]{%
-  \noindent\textbf{\small #1} \hfill \textit{#2}\par%
-  \vspace{0.2em}%
-}
-
-% Header 4 - Italic subheading or label (e.g. Project name)
-\newcommand{\cvHeaderFour}[1]{%
-  \textit{#1}%
+\newcommand{\cvHeaderThree}[1]{%
+  \noindent\textit{#1}%
 }
 
 % Paragraph
 \newcommand{\cvItem}[1]{%
-  \noindent\parbox{\dimexpr\linewidth}{#1}\par\vspace{0.4em}%
+  \noindent\parbox{\dimexpr\linewidth}{#1}\par%
 }
 
 % Bullet list
 \newenvironment{cvItemList}{%
   \begin{itemize}%
-    \setlength{\itemsep}{0.2em}%
+    \setlength{\itemsep}{0.1em}%
     \setlength{\topsep}{0em}%
     \setlength{\partopsep}{0em}%
     \setlength{\parsep}{0em}%
@@ -80,31 +73,64 @@
 \cvItem{College of Engineering Pune, Technological University}
 
 %----------- Experience -----------
-\cvHeaderOne{Experience}
+\cvHeaderOne{Proffesional Experience}
 
-\cvHeaderTwo{ION Group, Pune, India}{Jul 2022 -- Jul 2025}
+%----------- Experience at ION -----------
+\cvHeaderTwo{ION Group}{20 Jun 2022 -- 20 Jun 2025}
 
-\cvHeaderThree{Team: Wall Street Suite – Cash Management}{Jul 2022 -- Mar 2024}
-
-\cvHeaderFour{Project 1: Reconciliation Engine}
+\cvHeaderThree{Project: Ion-Foundation}
 
 \begin{cvItemList}
-  \item Redesigned reconciliation matching logic, reducing false positives by 40\%.
+  \item Improved speed of dataload, bringing down load time from 30mins to 2mins  
+\end{cvItemList}
+
+\cvHeaderThree{iCMLimits - Core Maintainer}
+\begin{cvItemList}
   \item Implemented support for multi-currency matching with dynamic thresholding.
 \end{cvItemList}
 
-\cvHeaderFour{Project 2: Reporting Module}
-
+\cvHeaderThree{iCM-RefData – Core Maintainer}
 \begin{cvItemList}
-  \item Migrated reporting framework from legacy XML to JSON pipeline.
-  \item Introduced scheduled report batching and delivery, reducing support requests.
+  \item Architected a reusable approval workflow adopted by 5 teams, enabling faster development and consistent business logic implementation.
+  \item Refactored Angular front-end, eliminating 2000+ lines of duplicate code and standardizing UI components for better maintainability.
+  \item Implemented audit history tracking with Hibernate Envers, allowing users to view change logs directly in the UI.
+  \item Developed a Cucumber-based integration testing framework, reducing manual testing efforts during upgrades and accelerating release cycles.
+  \item Reviewed code across a shared codebase used by 5 teams, ensuring code quality and enforcing best practices.
+  \item Collaborated with platform teams to propose enhancements to the Ion-Foundation framework and led multiple upgrade rollouts.
 \end{cvItemList}
 
-\cvHeaderThree{Team: Payments and Messaging}{Apr 2024 -- Jul 2025}
+%----------- Experience at Securonix -----------
+\cvHeaderTwo{Securonix}{04 May 2021 -- 26 Jun 2021}
 
+\cvHeaderThree{Security Software Engineer Intern}
 \begin{cvItemList}
-  \item Contributed to ISO 20022 message formatter implementation.
-  \item Collaborated on unit test coverage and refactoring efforts.
+\item Improved policy compatibility with Securonix SNYPER tool by identifying incompatible policies.
+\item Enhanced threat hunting by creating Flask web app for transferring and processing IOCs, boosting
+threat detection.
 \end{cvItemList}
+
+%----------- Experience at MindSpark -----------
+\cvHeaderTwo{MindSpark'19, COEP}{04 May 2021 -- 26 Jun 2021}
+
+\cvHeaderThree{Web Developer}
+\begin{cvItemList}
+\item Designed the event’s website section as part of the web development team.
+\item Collaborated on an Android app that achieved over 1,000 downloads within a week.
+\end{cvItemList}
+
+% %----------- Mentorship Experience -------------
+% \cvHeaderOne{Mentorship experience}
+%
+% \cvHeaderThree{ION Group}
+% \begin{cvItemList}
+% \item 3 years dev induction 
+% \item Onboarding new members when in Ion-Foundation and iCM team in WSS 
+% \end{cvItemList}
+%
+% \cvHeaderThree{DSAI club, COEP}
+% \cvItem{Efficient nets paper explained to juniors}
+%
+% %----------- Publications -------------
+% \cvHeaderOne{Publications}
 
 \end{document}
