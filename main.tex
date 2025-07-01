@@ -75,15 +75,67 @@
 %----------- Education -----------
 \cvHeaderOne{Education}
 
-\cvHeaderTwo{M.S. in Electrical and Computer Engineering (Quantum Computing Track)}{Aug 2025 -- Present}
+\cvHeaderTwo{M.S. in Electrical and Computer Engineering (Quantum Computing Track)}{Expected Aug 2025}
 \cvItem{Duke University}
 
 \cvHeaderTwo{B.Tech in Electronics and Telecommunication Engineering}{Aug 2018 -- May 2022}
 \cvItem{College of Engineering Pune, Technological University}
 
 
+%----------- Research Interest -----------
+\cvHeaderOne{Research interest}
+Interested in the full quantum computing stack, from application level software to hardware adjacent control systems. Currently contributing to quantum software libraries, with the goal of moving deeper into quantum control, hardware interfaces, and cross layer approaches to error correction.
+
+% %----------- Publications -------------
+\cvHeaderOne{Publications}
+
+\cvHeaderThree{HLS Implementation of Quantum Shor’s Algorithm Using Matrix Pruning}
+\begin{cvItemList}
+\item Shor's algorithm was simulated efficiently on resource-constrained hardware, like FPGAs, by converting quantum circuits, traditionally represented by memory-intensive unitary matrices, into compact data flow graph representations
+\item This FPGA implementation successfully achieved the factorization of large numbers, including 16,843,009, demonstrating the practical potential of hardware-based quantum algorithm simulations.
+\item DOI : \href{https://doi.org/10.1109/ICAECT54875.2022.9807860}{10.1109/ICAECT54875.2022.9807860}
+\item Published in \textit{2022 Second International Conference on Advances in Electrical, Computing, Communication and Sustainable Technologies (ICAECT)}
+\end{cvItemList}
+
+% %----------- Projects -------------
+\cvHeaderOne{Projects}
+
+\cvHeaderTwo{Open source contributions}{}
+
+\cvHeaderThree{Pennylane}
+\begin{cvItemList}
+\item Enhanced the testing framework by implementing assert\_equal in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{5780}. This feature provides detailed explanations for operator differences, improving debugging.
+\item Implemented QutritChannel functionality in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{5793} to support noise models for qutrits in quantum computing simulations.
+\item Improved shot sampling efficiency with shots.bins() in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{5476}, optimizing performance.
+\end{cvItemList}
+
+\cvHeaderThree{Amazon braket python SDK}
+\begin{cvItemList}
+\item Resolved Issue \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{603} by handling conflicts with FreeParameter names and OpenQASM reserved keywords in PR \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{999}. 
+\end{cvItemList}
+
+\cvHeaderThree{Qiskit}
+\begin{cvItemList}
+\item Contributed to fixing Issue \#\href{https://github.com/Qiskit/qiskit/issues/12106}{12106}, addressing synth\_cnot\_count\_full\_pmh for synthesizing linear reversible circuits.
+\end{cvItemList}
+
+\cvHeaderThree{Qbraid-Qir}
+\begin{cvItemList}
+\item Identified that qbraid-qir generated QIR using a custom profile rather than the expected Base Profile; raised a GitHub issue \#\href{https://github.com/qBraid/qbraid-qir/issues/215}{215} to highlight the missing support, which later implemented by the community. 
+\end{cvItemList}
+
+\newpage
+
+\cvHeaderTwo{Quantum Tic Tac Toe}{}
+\begin{cvItemList}
+\item Developed Quantum Tic Tac Toe, an educational game integrating quantum mechanics concepts like superposition, entanglement, and measurement into classic tic\-tac\-toe gameplay to enhance understanding of quantum principles
+\item Deployed the game on a \href{https://quantumtictactoe-ekm2cauxbumdelekkkaxqz.streamlit.app}{website} for easy access and containerized it with Docker, enabling players to run it locally on their machines.
+\item \href{https://github.com/Tarun-Kumar07/QuantumTicTacToe}{Link} to source code.
+\end{cvItemList}
+
+
 %----------- Experience -----------
-\cvHeaderOne{Proffesional Experience}
+\cvHeaderOne{Professional Experience}
 
 %----------- Experience at ION -----------
 \cvHeaderTwo{ION Group}{Jun 2022 -- Jun 2025}
@@ -91,15 +143,14 @@
 \cvHeaderThree{Foundation}
 
 \begin{cvItemList}
- % TODO
-  \item Improved speed of dataload, bringing down load time from 30mins to 2mins  
-  \item Import and Export 
-  \item App gen 
+  \item Improved speed of dataload, bringing down load time from 30mins to 2mins  ???
+  \item Designed and implemented support for Excel-based import/export in Foundation applications, enabling clients to manage complex nested entities through a tabular format with upsert functionality. 
+  \item Developed a wrapper tool for Ion-Foundation to convert Excel-based entity definitions into Java meta-models, allowing non-technical users to auto-generate fully functional CRUD applications without writing code. 
 \end{cvItemList}
 
 \cvHeaderThree{iCM-Limits - Core Maintainer}
 \begin{cvItemList}
-  \item Developed core components of a new in-memory calculation engine for computing financial availability (Limit + Utilization), consumed by FNMA to auto-generate DLOD reports.
+  \item Developed core components of a new in-memory calculation engine for computing availability (Limit + Utilization), consumed by FNMA to auto-generate DLOD reports.
   \item Contributed to implementation of real-time APIs that validate incoming transactions and flag potential limit breaches before persisting to the system.
   \item Designed and optimized initialization of calculation matrices, eliminating redundant structures to improve memory efficiency and reduce computation time.
   \item Built rule-based filter matching logic to classify and aggregate transactions per account and date, enabling flexible and extensible business configurations.
@@ -111,8 +162,6 @@
   \item Achieved 92\% code coverage with 1000+ Cucumber test cases; FNMA reported zero bugs post-production, demonstrating delivery quality and system reliability.
   \item Contributed to a shared code review framework adopted by all developers, reducing dependency on architects and improving code consistency.
 \end{cvItemList}
-
-\newpage
 
 \cvHeaderThree{iCM-RefData – Core Maintainer}
 \begin{cvItemList}
@@ -143,8 +192,8 @@
 \item Collaborated on an Android app that achieved over 1,000 downloads within a week.
 \end{cvItemList}
 
-%----------- Mentorship Experience -------------
-\cvHeaderOne{Mentorship Experience}
+%----------- Teaching & Mentorship Experience -------------
+\cvHeaderOne{Teaching and Mentorship Experience}
 
 \cvHeaderThree{ION Group}
 \begin{cvItemList}
@@ -157,69 +206,21 @@
   \item Delivered a technical session explaining the \textbf{EfficientNet} paper, covering hyperparameter tuning in CNNs to help juniors understand modern research in deep learning.
 \end{cvItemList}
 
-%----------- Scholarships -----------
-\cvHeaderOne{Scholarships}
-\cvHeaderTwo{Duke ECE merit award}{Aug 2025 -- Dec 2026}
-\begin{cvItemList}
-  \item Awarded \$3{,}386 per semester for all three full-time semesters at Duke.
-\end{cvItemList}
-
-\newpage
-
-% %----------- Publications -------------
-\cvHeaderOne{Publications}
-
-\cvHeaderThree{HLS Implementation of Quantum Shor’s Algorithm Using Matrix Pruning}
-\begin{cvItemList}
-\item Shor's algorithm was simulated efficiently on resource-constrained hardware, like FPGAs, by converting quantum circuits, traditionally represented by memory-intensive unitary matrices, into compact data flow graph representations
-\item This FPGA implementation successfully achieved the factorization of large numbers, including 16,843,009, demonstrating the practical potential of hardware-based quantum algorithm simulations.
-\item \href{https://ieeexplore.ieee.org/document/9807860}{Link} to publication
-\end{cvItemList}
-
-% %----------- Projects -------------
-\cvHeaderOne{Projects}
-
-\cvHeaderTwo{Open source contributions}{}
-
-\cvHeaderThree{Pennylane}
-\begin{cvItemList}
-\item Enhanced the testing framework by implementing assert\_equal in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{5780}. This feature provides detailed explanations for operator differences, improving debugging.
-\item Implemented QutritChannel functionality in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{5793} to support noise models for qutrits in quantum computing simulations.
-\item Improved shot sampling efficiency with shots.bins() in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{5476}, optimizing performance.
-\end{cvItemList}
-
-\cvHeaderThree{Amazon braket python SDK}
-\begin{cvItemList}
-\item Resolved Issue \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{603} by handling conflicts with FreeParameter names and OpenQASM reserved keywords in PR \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{999}. 
-\end{cvItemList}
-
-\cvHeaderThree{Qiskit}
-\begin{cvItemList}
-\item Contributed to fixing Issue \#\href{https://github.com/Qiskit/qiskit/issues/12106}{12106}, addressing synth\_cnot\_count\_full\_pmh for synthesizing linear reversible circuits.
-\end{cvItemList}
-
-\cvHeaderThree{Qbraid-Qir}
-\begin{cvItemList}
- % TODO
-\item Reported an issue 
-\end{cvItemList}
-
-\cvHeaderTwo{Quantum Tic Tac Toe}{}
-\begin{cvItemList}
-\item Developed Quantum Tic Tac Toe, an educational game integrating quantum mechanics concepts like superposition, entanglement, and measurement into classic tic\-tac\-toe gameplay to enhance understanding of quantum principles
-\item Deployed the game on a \href{https://quantumtictactoe-ekm2cauxbumdelekkkaxqz.streamlit.app}{website} for easy access and containerized it with Docker, enabling players to run it locally on their machines.
-\item \href{https://github.com/Tarun-Kumar07/QuantumTicTacToe}{Link} to source code.
-\end{cvItemList}
-
-
-% %----------- Achievements -------------
-\cvHeaderOne{Achievements}
+% %----------- Workshop, Schools and Certifications -------------
+\cvHeaderOne{Workshop, Schools and Certifications}
 \begin{cvItemList}
 \item Earned an Advance badge in the IBM Quantum Explorer program. (\href{https://www.credly.com/badges/28fb91b1-077d-45e3-8f1a-77a383ee392c/linked_in_profile}{Certificate link})  
 \item Finished among the top 100 in coding challenges at QHack 2024. (\href{https://pennylane.ai/profile/tarun07?certificate=qhack-2024-coding-challenges-top-100}{Certificate link})  
 \item Successfully completed four bounties under the UnitaryHack. (\href{https://unitaryhack.dev/hackers/tarun-kumar07/}{Link to contributions})  
 \item Completed IBM Quantum Challenge 2024. (\href{https://www.credly.com/badges/5ab13c32-2ecf-42ab-ba84-e308deb7a511/linked_in_profile}{Link to badge})  
 \item Attended the Qiskit Global Summer School 2024. (\href{https://www.credly.com/badges/6346a498-05fc-482f-9c56-25114b9bad2c/linked_in_profile}{Certificate link})
+\end{cvItemList}
+
+%----------- Honors & Awards-----------
+\cvHeaderOne{Scholarships}
+\cvHeaderTwo{Duke ECE merit award}{Aug 2025 -- Dec 2026}
+\begin{cvItemList}
+  \item Awarded \$3{,}386 per semester for all three full-time semesters at Duke.
 \end{cvItemList}
 
 \end{document}
