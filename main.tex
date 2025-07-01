@@ -2,7 +2,15 @@
 
 \usepackage{geometry}
 \geometry{margin=0.75in}
-\usepackage[hidelinks]{hyperref}
+
+
+%------------------ Hyperlinks with underlines ------------------%
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black]{hyperref}
+\usepackage[normalem]{ulem} % for underlining with \uline
+
+% Automatically underline all hyperlinks (for \href only)
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\uline{#2}}}
 
 %------------------ List Spacing Fix ------------------%
 \setlength{\itemsep}{0pt}
@@ -92,7 +100,6 @@
 \cvHeaderThree{iCM-Limits - Core Maintainer}
 \begin{cvItemList}
   \item Developed core components of a new in-memory calculation engine for computing financial availability (Limit + Utilization), consumed by FNMA to auto-generate DLOD reports.
-  \item Implemented configuration-driven logic to compute Limits and Utilizations using weighted Aggregations over filtered transactions.
   \item Contributed to implementation of real-time APIs that validate incoming transactions and flag potential limit breaches before persisting to the system.
   \item Designed and optimized initialization of calculation matrices, eliminating redundant structures to improve memory efficiency and reduce computation time.
   \item Built rule-based filter matching logic to classify and aggregate transactions per account and date, enabling flexible and extensible business configurations.
@@ -176,25 +183,43 @@
 
 \cvHeaderThree{Pennylane}
 \begin{cvItemList}
-\item Enhanced the testing framework by implementing assert\_equal in PR \#5780. This feature provides detailed explanations for operator differences, improving debugging.
-\item Implemented QutritChannel functionality in PR \#5793 to support noise models for qutrits in quantum computing simulations.
-\item Improved shot sampling efficiency with shots.bins() in PR \#5476, optimizing performance.
+\item Enhanced the testing framework by implementing assert\_equal in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{5780}. This feature provides detailed explanations for operator differences, improving debugging.
+\item Implemented QutritChannel functionality in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{5793} to support noise models for qutrits in quantum computing simulations.
+\item Improved shot sampling efficiency with shots.bins() in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{5476}, optimizing performance.
 \end{cvItemList}
 
 \cvHeaderThree{Amazon braket python SDK}
 \begin{cvItemList}
-\item Resolved Issue \#603 by handling conflicts with FreeParameter names and OpenQASM reserved keywords in PR \#999. 
+\item Resolved Issue \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{603} by handling conflicts with FreeParameter names and OpenQASM reserved keywords in PR \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{999}. 
 \end{cvItemList}
 
 \cvHeaderThree{Qiskit}
 \begin{cvItemList}
-\item Contributed to fixing Issue \#12106, addressing synth\_cnot\_count\_full\_pmh for synthesizing linear reversible circuits.
+\item Contributed to fixing Issue \#\href{https://github.com/Qiskit/qiskit/issues/12106}{12106}, addressing synth\_cnot\_count\_full\_pmh for synthesizing linear reversible circuits.
 \end{cvItemList}
 
 \cvHeaderThree{Qbraid-Qir}
 \begin{cvItemList}
  % TODO
 \item Reported an issue 
+\end{cvItemList}
+
+\cvHeaderTwo{Quantum Tic Tac Toe}{}
+\begin{cvItemList}
+\item Developed Quantum Tic Tac Toe, an educational game integrating quantum mechanics concepts like superposition, entanglement, and measurement into classic tic\-tac\-toe gameplay to enhance understanding of quantum principles
+\item Deployed the game on a \href{https://quantumtictactoe-ekm2cauxbumdelekkkaxqz.streamlit.app}{website} for easy access and containerized it with Docker, enabling players to run it locally on their machines.
+\item \href{https://github.com/Tarun-Kumar07/QuantumTicTacToe}{Link} to source code.
+\end{cvItemList}
+
+
+% %----------- Achievements -------------
+\cvHeaderOne{Achievements}
+\begin{cvItemList}
+\item Earned an Advance badge in the IBM Quantum Explorer program. (\href{https://www.credly.com/badges/28fb91b1-077d-45e3-8f1a-77a383ee392c/linked_in_profile}{Certificate link})  
+\item Finished among the top 100 in coding challenges at QHack 2024. (\href{https://pennylane.ai/profile/tarun07?certificate=qhack-2024-coding-challenges-top-100}{Certificate link})  
+\item Successfully completed four bounties under the UnitaryHack. (\href{https://unitaryhack.dev/hackers/tarun-kumar07/}{Link to contributions})  
+\item Completed IBM Quantum Challenge 2024. (\href{https://www.credly.com/badges/5ab13c32-2ecf-42ab-ba84-e308deb7a511/linked_in_profile}{Link to badge})  
+\item Attended the Qiskit Global Summer School 2024. (\href{https://www.credly.com/badges/6346a498-05fc-482f-9c56-25114b9bad2c/linked_in_profile}{Certificate link})
 \end{cvItemList}
 
 \end{document}
