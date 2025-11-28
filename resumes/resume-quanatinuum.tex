@@ -1,0 +1,198 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Sourabh Bajaj
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure ATS parsing
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeHeading}[4]{
+  \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small#2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%---------- HEADING -----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://sourabhbajaj.com/}{\Large Sourabh Bajaj}} &
+  Email: \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com} \\
+  \href{https://sourabhbajaj.com/}{sourabhbajaj.com} &
+  Mobile: \href{tel:+11234567890}{+1-123-456-7890} \\
+\end{tabular*}
+
+%----------- EDUCATION -----------------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Duke University}{Durham, NC}
+    {M.S. in Electrical and Computer Engineering (Quantum Computing)}
+    {Aug 2025 -- May 2027}
+
+  \resumeSubheading
+    {COEP Technological University}{Pune, India}
+    {B.E. in Electronics and Telecommunication; GPA: 8.63/10.0}
+    {Aug 2018 -- May 2022}
+
+\resumeSubHeadingListEnd
+
+%----------- OPEN SOURCE CONTRIBUTIONS -----------------
+\section{Open Source Contributions}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {\textbf{Pennylane}}{}
+    {Python framework for quantum programming}{}
+    \resumeItemListStart
+      \resumeItem
+        {\textbf{Enhanced} the unit testing suite for a library with \textbf{200+ contributors} by
+        refactoring the operator‑equality method to return detailed mismatch information, improving
+        the \textbf{developer experience} with actionable debugging context.}
+      \resumeItem
+        {\textbf{Optimized} internal sampling logic in \texttt{shots.bins()}, achieving a
+        \textbf{50\% increase} in shot‑sampling efficiency.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {\textbf{Amazon Bracket SDK}}{}
+    {Python SDK for quantum hardware}{}
+    \resumeItemListStart
+      \resumeItem
+        {\textbf{Resolved} a naming conflict by validating against OpenQASM‑reserved identifiers,
+        eliminating runtime errors and ensuring reliable execution of parameterized circuits.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- EXPERIENCE -----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Ion Group}{Pune, Maharashtra}
+    {Software Engineer 1}{June 2022 -- June 2025}
+    \resumeItemListStart
+      \resumeItem
+        {Optimized file reading in a data load process after analyzing flame graphs, reducing load
+        time from 21 minutes to 7.5 seconds.}
+      \resumeItem
+        {Optimized Java \texttt{HashMap} usage in critical calculation paths, reducing iteration
+        latency from 6µs to 300ns per cycle.}
+      \resumeItem
+        {Architected a reusable approval workflow adopted by 5 teams, enabling faster development
+        and consistent business logic implementation.}
+      \resumeItem
+        {Refactored Angular front-end, removing 2000+ lines of duplicate code and standardizing UI
+        components for maintainability.}
+      \resumeItem
+        {Developed a Cucumber-based integration testing framework, reducing manual testing effort
+        and accelerating release cycles.}
+      \resumeItem
+        {Designed a rule-based timezone assignment system, supporting attribute-based matching with
+        implicit priority resolution.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Securonix}{Pune, Maharashtra (Remote)}
+    {Software Engineer Intern}{May 2021 -- Aug 2021}
+    \resumeItemListStart
+      \resumeItem
+        {\textbf{Engineered} Python tools to parse XML security policy data across \textbf{hundreds
+        of configurations}, generating detailed Excel reports that accelerated identification of
+        inconsistent attributes and improved policy alignment accuracy.}
+      \resumeItem
+        {\textbf{Designed} a proof‑of‑concept Flask web interface for Artemis — a central submission
+        system for Indicators of Compromise (IOCs) with queued JSON storage and basic authentication
+        for scalability and security.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------- Projects -----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{\textbf{Quantum Tic Tac Toe} : An educational game demonstrating quantum‑mechanics concepts  through classic gameplay deployed on \href{https://quantumtictactoe-ekm2cauxbumdelekkkaxqz.streamlit.app}{Streamlit}  and containerized with Docker for local use.}
+\resumeItemListEnd
+
+%----------- SKILLS -----------------
+\section{Skills}
+\resumeSubHeadingListStart
+  \resumeSubItem{\textbf{Languages:} Java, Python}
+  \resumeSubItem{\textbf{Technologies:} Cucumber, Guice, Flask, Streamlit, PyTorch}
+  \resumeSubItem{\textbf{Misc:} Git, Docker, CI/CD}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
