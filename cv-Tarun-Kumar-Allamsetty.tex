@@ -105,38 +105,31 @@
 
 \cvHeaderTwo{Open source contributions}{}
 
-\cvHeaderThree{Pennylane}
+\cvHeaderThree{PennyLane}
 \begin{cvItemList}
-\item \textbf{Enhanced} the unit testing suite of PennyLane 
-      (\textbf{217 contributors}, \textbf{~199 monthly pull requests}) by refactoring multiple 
-      operator‑equality kernels and corresponding test cases to return detailed explanations 
-      for operator mismatches instead of simple boolean outputs, improving 
-      \textbf{debugging clarity} and \textbf{developer experience} by helping contributors 
-      interpret test failures more easily.
-      (\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{PR \#5780}).
-\item \textbf{Implemented} the \texttt{QutritChannel} operation 
-      (\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{PR \#5793}), extending PennyLane’s 
-      noise‑modelling framework from qubits to qutrits. Added corresponding tests and documentation; 
-      the feature is part of the public API 
+\item \textbf{Enhanced} the unit testing suite for a library with \textbf{200+ contributors} by 
+      refactoring operator‑equality method to return detailed mismatch explanations. This improved 
+      \textbf{developer experience} by replacing simple boolean outputs with actionable debugging 
+      context (\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{PR \#5780}).
+\item \textbf{Implemented} the \texttt{QutritChannel} operation
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{PR \#5793}), extending the noise‑modelling 
+      framework from qubits to qutrits. The feature is fully documented and part of the public API
       (\href{https://docs.pennylane.ai/en/stable/code/api/pennylane.QutritChannel.html}{docs}).
-\item \textbf{Improved} shot‑sampling efficiency in \texttt{shots.bins()} 
-      (\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{PR \#5476}), implemented between 
-      PennyLane \texttt{v0.35.1} and \texttt{v0.36.0}, optimizing internal sampling logic and 
-      achieving an \textbf{50\% performance increase}.
-\item \textbf{Implemented} the \texttt{process\_counts} feature 
-      (\href{https://github.com/PennyLaneAI/pennylane/pull/5256}{PR \#5256} and 
-      \href{https://github.com/PennyLaneAI/pennylane/pull/5395}{PR \#5395}), extending PennyLane’s 
-      sample‑based measurement framework to process count‑dictionary data produced by external 
-      devices.
+\item \textbf{Optimized} internal sampling logic in \texttt{shots.bins()}
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{PR \#5476}), achieving a \textbf{50\% 
+      performance increase} in shot‑sampling efficiency.
+\item \textbf{Extended} the measurement framework by implementing \texttt{process\_counts}
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5256}{PR \#5256}, 
+      \href{https://github.com/PennyLaneAI/pennylane/pull/5395}{PR \#5395}), enabling PennyLane to ingest 
+      count‑dictionary data directly from external quantum devices.
 \end{cvItemList}
 
-\cvHeaderThree{Amazon braket python SDK}
+\cvHeaderThree{Amazon Braket Python SDK}
 \begin{cvItemList}
-\item \textbf{Resolved} a naming conflict in the Amazon Braket SDK by enforcing validation against 
-      OpenQASM-reserved identifiers, eliminating runtime errors and ensuring reliable execution 
-      of parameterized circuits.
-      (\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{Issue \#603}, 
-      \href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{PR \#999})
+\item \textbf{Resolved} a naming conflict by enforcing validation against OpenQASM‑reserved identifiers, 
+      eliminating runtime errors and ensuring reliable execution of parameterized circuits
+      (\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{Issue \#603}, 
+      \href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{PR \#999}).
 \end{cvItemList}
 
 \cvHeaderThree{Qiskit}
@@ -202,9 +195,13 @@
 
 \cvHeaderThree{Security Software Engineer Intern}
 \begin{cvItemList}
-\item Enhanced policy compatibility with the Securonix SNYPER tool by identifying and reporting on incompatible policies, facilitating swift remediation by cross-functional teams.
-\item Optimized threat hunting operations by developing a Flask web application to efficiently transfer and process Indicators of Compromise (IOCs), enhancing threat detection capabilities.
-\item Streamlined team workflows and improved efficiency by creating automation scripts for various tasks, including web scraping and SQL query generation, resulting in time savings and increased productivity threat detection.
+\item \textbf{Engineered} Python tools to parse XML security policy data across \textbf{hundreds of 
+      configurations}, generating detailed Excel reports that accelerated the identification of 
+      inconsistent attributes and improved policy‑alignment accuracy.
+\item \textbf{Designed} a proof‑of‑concept Flask web interface for Artemis, creating a central 
+      submission system for Indicators of Compromise (IOCs). The architecture stored IOC metadata 
+      as JSON for queued processing and implemented foundational HTTP authentication for system 
+      security and scalability.
 \end{cvItemList}
 
 %----------- Experience at MindSpark -----------
