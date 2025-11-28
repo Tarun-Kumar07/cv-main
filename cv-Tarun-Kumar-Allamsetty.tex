@@ -107,14 +107,36 @@
 
 \cvHeaderThree{Pennylane}
 \begin{cvItemList}
-\item Enhanced the testing framework by implementing assert\_equal in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{5780}. This feature provides detailed explanations for operator differences, improving debugging.
-\item Implemented QutritChannel functionality in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{5793} to support noise models for qutrits in quantum computing simulations.
-\item Improved shot sampling efficiency with shots.bins() in PR \#\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{5476}, optimizing performance.
+\item \textbf{Enhanced} the unit testing suite of PennyLane 
+      (\textbf{217 contributors}, \textbf{~199 monthly pull requests}) by refactoring multiple 
+      operator‑equality kernels and corresponding test cases to return detailed explanations 
+      for operator mismatches instead of simple boolean outputs, improving 
+      \textbf{debugging clarity} and \textbf{developer experience} by helping contributors 
+      interpret test failures more easily.
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5780}{PR \#5780}).
+\item \textbf{Implemented} the \texttt{QutritChannel} operation 
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5793}{PR \#5793}), extending PennyLane’s 
+      noise‑modelling framework from qubits to qutrits. Added corresponding tests and documentation; 
+      the feature is part of the public API 
+      (\href{https://docs.pennylane.ai/en/stable/code/api/pennylane.QutritChannel.html}{docs}).
+\item \textbf{Improved} shot‑sampling efficiency in \texttt{shots.bins()} 
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5476}{PR \#5476}), implemented between 
+      PennyLane \texttt{v0.35.1} and \texttt{v0.36.0}, optimizing internal sampling logic and 
+      achieving an \textbf{50\% performance increase}.
+\item \textbf{Implemented} the \texttt{process\_counts} feature 
+      (\href{https://github.com/PennyLaneAI/pennylane/pull/5256}{PR \#5256} and 
+      \href{https://github.com/PennyLaneAI/pennylane/pull/5395}{PR \#5395}), extending PennyLane’s 
+      sample‑based measurement framework to process count‑dictionary data produced by external 
+      devices.
 \end{cvItemList}
 
 \cvHeaderThree{Amazon braket python SDK}
 \begin{cvItemList}
-\item Resolved Issue \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{603} by handling conflicts with FreeParameter names and OpenQASM reserved keywords in PR \#\href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{999}. 
+\item \textbf{Resolved} a naming conflict in the Amazon Braket SDK by enforcing validation against 
+      OpenQASM-reserved identifiers, eliminating runtime errors and ensuring reliable execution 
+      of parameterized circuits.
+      (\href{https://github.com/amazon-braket/amazon-braket-sdk-python/issues/603}{Issue \#603}, 
+      \href{https://github.com/amazon-braket/amazon-braket-sdk-python/pull/999}{PR \#999})
 \end{cvItemList}
 
 \cvHeaderThree{Qiskit}
@@ -127,14 +149,14 @@
 \item Identified that qbraid-qir generated QIR using a custom profile rather than the expected Base Profile; raised a GitHub issue \#\href{https://github.com/qBraid/qbraid-qir/issues/215}{215} to highlight the missing support, which later implemented by the community. 
 \end{cvItemList}
 
+\newpage
+
 \cvHeaderTwo{Quantum Tic Tac Toe}{}
 \begin{cvItemList}
 \item Developed Quantum Tic Tac Toe, an educational game integrating quantum mechanics concepts like superposition, entanglement, and measurement into classic tic\-tac\-toe gameplay to enhance understanding of quantum principles
 \item Deployed the game on a \href{https://quantumtictactoe-ekm2cauxbumdelekkkaxqz.streamlit.app}{website} for easy access and containerized it with Docker, enabling players to run it locally on their machines.
 \item \href{https://github.com/Tarun-Kumar07/QuantumTicTacToe}{Link} to source code.
 \end{cvItemList}
-
-\newpage
 
 %----------- Experience -----------
 \cvHeaderOne{Professional Experience}
