@@ -12,12 +12,26 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Define a purplish-blue color
+\definecolor{purpleblue}{RGB}{102, 0, 153} % adjust RGB for desired shade
+
+\hypersetup{
+    colorlinks=true,          % use colored text for links
+    urlcolor=purpleblue,      % external links
+    linkcolor=purpleblue,     % internal links (sections, toc)
+    citecolor=purpleblue,     % citation links
+    pdfborder={0 0 1}         % underline links (1 = thickness)
+}
+
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
 
+\urlstyle{same} 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot{}
@@ -86,10 +100,10 @@
 
 %---------- HEADING -----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://github.com/Tarun-Kumar07}{\Large Tarun Kumar Allamsetty}} &
-  Email: \href{mailto:tarunkumar.allamsetty@duke.edu}{tarunkumar.allamsetty@duke.edu} \\
+  \textbf{\Large Tarun Kumar Allamsetty} &
+  Email: tarunkumar.allamsetty@duke.edu \\
   \href{https://github.com/Tarun-Kumar07}{Github}, \href{https://www.linkedin.com/in/tarun-kumar-allamsetty/}{LinkedIn} &
-  Mobile: \href{tel:+19199046718}{+1-919-904-6718} \\
+  Mobile: +1-919-904-6718 \\
 \end{tabular*}
 
 %----------- EDUCATION -----------------
@@ -98,12 +112,12 @@
 
   \resumeSubheading
     {Duke University}{Durham, NC}
-    {M.S. in Electrical and Computer Engineering (Quantum Computing)}
+    {Masters in Electrical and Computer Engineering (Quantum Computing)}
     {Aug 2025 - May 2027}
 
   \resumeSubheading
     {COEP Technological University}{Pune, India}
-    {B.E. in Electronics and Telecommunication; GPA: 8.63/10.0}
+    {Bachelors in Electronics and Telecommunication; GPA: 8.63/10.0}
     {Aug 2018 - May 2022}
 
 \resumeSubHeadingListEnd
